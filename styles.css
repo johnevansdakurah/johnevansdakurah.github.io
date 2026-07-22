@@ -297,51 +297,44 @@ li { margin: 6px 0; }
   }
 }
 
-/* Mobile readability fix: keep academic text away from screen edges */
+/* Mobile readability and academic card treatment */
 @media (max-width: 820px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .container {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
   .section {
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding: 42px 0;
   }
 
-  #about .section-heading,
-  #about .about-full,
-  #resume .section-heading {
-    width: 100%;
-    max-width: 100%;
+  #about .about-full {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 22px 20px;
+    box-shadow: 0 8px 22px rgba(30, 37, 45, 0.06);
   }
 
   #about .about-full p,
-  #resume .section-heading p:not(.eyebrow),
-  .section-heading.compact p:not(.eyebrow) {
+  #resume .section-heading p:not(.eyebrow) {
     text-align: left;
     text-align-last: auto;
-    max-width: 100%;
-    overflow-wrap: normal;
+    overflow-wrap: break-word;
     word-break: normal;
     hyphens: auto;
   }
 
-  .cv-block,
-  .project-list article,
-  .contact-card {
-    width: 100%;
-    max-width: 100%;
+  #resume .section-heading.compact {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 22px 20px;
+    box-shadow: 0 8px 22px rgba(30, 37, 45, 0.06);
   }
 
-  .cv-block {
-    padding: 20px;
+  #resume .section-heading.compact p:not(.eyebrow) {
+    margin-bottom: 0;
   }
 }
 
@@ -351,7 +344,19 @@ li { margin: 6px 0; }
     padding-right: 18px;
   }
 
-  .cv-block {
-    padding: 18px;
+  #about .about-full,
+  #resume .section-heading.compact,
+  .cv-block,
+  .project-list article {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 26px;
   }
 }
